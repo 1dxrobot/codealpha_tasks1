@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Detector</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon" aria-hidden="true">🛡️</span>
+        <h1>Phishing Detector</h1>
+      </div>
+      <p class="tagline">Check URLs and email content for phishing attempts</p>
+    </header>
+
+    <main class="main">
+      <form id="check-form" class="card form-card">
+        <div class="form-group">
+          <label for="url">URL <span class="required">*</span></label>
+          <input
+            type="url"
+            id="url"
+            name="url"
+            placeholder="https://example.com or http://suspicious-site.com"
+            required
+            autocomplete="url"
+          >
+        </div>
+        <div class="form-group">
+          <label for="email_content">Email / message content <span class="optional">(optional)</span></label>
+          <textarea
+            id="email_content"
+            name="email_content"
+            rows="4"
+            placeholder="Paste email or message text here to check for urgent words and phishing phrases…"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit-btn">
+          <span class="btn-text">Check for phishing</span>
+          <span class="btn-loading" aria-hidden="true">Checking…</span>
+        </button>
+      </form>
+
+      <div id="result-area" class="result-area hidden" aria-live="polite">
+        <div class="card result-card" id="result-card">
+          <p class="result-label">Result</p>
+          <p class="result-value" id="result-value"></p>
+          <p class="result-url" id="result-url"></p>
+        </div>
+      </div>
+
+      <div id="error-area" class="error-area hidden" role="alert">
+        <div class="card error-card">
+          <p class="error-message" id="error-message"></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>For educational purposes only. Do not rely solely on this tool for security decisions.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

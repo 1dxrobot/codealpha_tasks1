@@ -1,0 +1,15 @@
+url,label
+http://secure-login-update.com,1
+https://google.com,0
+https://www.google.com,0
+https://www.google.com/,0
+https://www.google.com/?authuser=0,0
+https://www.google.com/search?q=test,0
+https://github.com,0
+https://www.youtube.com,0
+https://www.facebook.com,0
+https://www.amazon.com,0
+https://www.microsoft.com,0
+https://login.secure-verify-account.com,1
+http://update-password-now.net,1
+http://account-suspended-alert.com,1
